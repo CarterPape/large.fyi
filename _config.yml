@@ -30,6 +30,7 @@ defaults:
             type: "pages"
         values:
             layout: "page"
+            image: /assets/Untitled-2.png
 
 kramdown:
     footnote_backlink: "⤴"

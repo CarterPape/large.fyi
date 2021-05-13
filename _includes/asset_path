@@ -1,0 +1,37 @@
+{%- if include.from_post -%}
+    {%- assign post_name = include.from_post -%}
+{%- else -%}
+    {%- assign post_name =
+        page.path 
+        | split: '/'
+        | last
+        | split: '.' 
+        | first
+    -%}
+{%- endif -%}
+
+{%- assign post_year =
+    post_name
+    | split: "-"
+    | first
+-%}
+
+{%- assign post_month =
+    post_name
+    | split: "-"
+    | slice: 1
+    | first
+-%}
+
+{%- assign asset_path =
+    '/assets/posts/'
+    | append: post_year
+    | append: '/'
+    | append: post_month
+    | append: '/'
+    | append: post_name
+    | append: '/'
+    | append: include.file_name
+-%}
+
+{{- asset_path -}}

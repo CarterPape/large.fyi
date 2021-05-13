@@ -1,0 +1,27 @@
+{%- assign i_just_want_nice_formatting_without_errors = "" -%}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta name="viewport"
+        content="
+            {{- i_just_want_nice_formatting_without_errors -}}
+            width=device-width,
+            initial-scale=1
+            {{- i_just_want_nice_formatting_without_errors -}}
+        "
+    >
+    {%- seo -%}
+    <link rel="stylesheet"
+        href="
+            {{-
+                "/assets/main.css?v=2021-04-12 03:47"
+                | relative_url
+            -}}
+        "
+    >
+    {%- feed_meta -%}
+    {%- include head/favicons.html -%}
+</head>

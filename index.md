@@ -1,6 +1,6 @@
 # writ or at large?
 
-The phrases **writ large** and **at large** are commonly confused. Here are is a mnemonic for remembering the difference:
+The phrases **writ large** and **at large** are commonly confused. Here is a mnemonic for remembering the difference:
 
 > **Writ large** usually means **clear** or **obvious**.\
 > **At large** usually means **in general**.

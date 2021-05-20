@@ -17,6 +17,8 @@ description:    A brief explainer on two commonly confused phrases
 author:         carter_pape
 lang:           en-us
 
+cloudflare_token: fd30a56a0eab43c1be7a137be3081c6b
+
 # Formatting settings
 
 permalink:  pretty

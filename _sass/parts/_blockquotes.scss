@@ -1,5 +1,5 @@
 blockquote {
-    color: $grey-color;
+    color: $text-color;
     border-left: 1px solid $grey-color-light;
     margin: 0 0 1em;
     padding: .5em 1.3rem;
@@ -8,6 +8,9 @@ blockquote {
     
     > :last-child {
         margin-bottom: 0;
+    }
+    p {
+        color: $text-color;
     }
 }
 

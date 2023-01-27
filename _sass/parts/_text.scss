@@ -30,7 +30,7 @@ ol {
 */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 h2 {
@@ -73,4 +73,9 @@ a {
 
 hr {
     margin: 3em 4em;
+}
+
+p {
+    line-height: 1.5;
+    color: $grey-color;
 }

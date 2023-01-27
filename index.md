@@ -1,21 +1,17 @@
 # writ or at large?
 
-The phrases **writ large** and **at large** are commonly confused. Here is a mnemonic for remembering the difference:
+People confuse the phrases **writ large** and **at large**. Here is the skinny on the difference:
 
 > **Writ large** usually means **clear** or **obvious**.\
 > **At large** usually means **in general**.
 
-The next section goes through dictionary definitions of the two phrases. If you prefer to learn by example, see the definitions of [**writ large**](https://www.lexico.com/en/definition/writ_large) and [**at large**](https://www.lexico.com/en/definition/at_large) in the *New Oxford American Dictionary*.
-
 ## Dictionary definitions
 
-Why should you believe [some random internet guy](https://carterpape.com) about the difference between these two phrases? You don't have to. You can believe dictionary editors, instead.
+I'm targeting journalists with this information, and they tend to use the [Associated Press Stylebook](https://www.apstylebook.com) as a reference. The AP Stylebook cites *Webster's New World College Dictionary* as the "first reference for spelling, style, usage and foreign geographic names," so it's my first reference here.
 
-### Webster's New World College Dictionary
+### The dictionary of reference for journalists
 
-This is the dictionary of "first reference for spelling, style, usage and foreign geographic names" for the [Associated Press Stylebook](https://www.apstylebook.com). Since I'm a journalist, and I'm targeting journalists with this information, I'll use this as a first reference.
-
-Below are the relevant definitions from *Webster's*. Note that the links below are accessible only with a digital subscription to the dictionary via the AP Stylebook.
+You need a digital subscription via the AP Stylebook if you want to see these definitions firsthand, but I've copied the relevant parts here:
 
 {% capture quote %}
 **writ large**
@@ -43,11 +39,11 @@ expressed, shown, or done on a larger scale or in a clearer or more emphatic way
     by =    "Webster's New World College Dictionary (excerpt of entry on [**large**](https://www.apstylebook.com/websters/webster-s-l-large))"
 %}
 
-Note that the definition of **writ large** is from the entry on **writ**, which is an archaic preterite and past participle of **write**.
+Note that the definition of **writ large** comes from the entry on **writ**, which is an archaic preterite and past participle of **write**. The definition of **at large** comes from the entry on **large**.
 
-The definition of **at large** is from the entry on **large**.
+Ok, but what about some examples? I happen to know a dictionary with examples.
 
-### New Oxford American Dictionary
+### A dictionary with examples
 
 The Oxford University Press publishes this dictionary, which also [comes on Macs](https://support.apple.com/guide/dictionary/dictionary-user-guide-dic34880/mac). The versions of these definitions are from [Lexico.com](https://www.lexico.com), which hosts a free version of the dictionary.
 
@@ -86,7 +82,19 @@ Click the links with each definition to see extensive lists of example sentences
     by =    "Oxford University Press via Lexico.com (entry on [**at large**](https://www.lexico.com/en/definition/at_large))"
 %}
 
+## Why I made this
+
+I sometimes hear people say "writ large" when I think they mean "at large." This is understandable; it has a fun flare to it. I personally take any opportunity I can to say "writ large."
+
+You might be thinking, "Language is fluid! The meanings of words and phrases change over time."
+
+You're right. It might even be silly to fight this particular change (if it is even happening; I don't have much data on this).
+
+Nonetheless, I think it is useful to have phrases that mean different things and preserve the beauty of special phrases.
+
+Maybe "writ large" will take on new meaning as [people use it more often](https://books.google.com/ngrams/graph?content=writ+large&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3), but I think it's worth also preserving its old meaning.
+
 ## Who made this?
 
-[Carter Pape](https://carterpape.com) made this. You can email him at \
-`#####@large.fyi` (replace `#####` with [the standard English greeting word](https://en.wiktionary.org/wiki/hello)).
+I made this! I'm [Carter Pape](https://carterpape.com). You can email me at \
+`????@large.fyi` (replace `????` with [the standard English greeting word](https://en.wiktionary.org/wiki/hello)).

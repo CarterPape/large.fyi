@@ -34,3 +34,5 @@ gem "wdm", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "classifier-reborn"
 gem "webrick"
 gem "html-proofer"
+gem "csv"
+gem "base64"

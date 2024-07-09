@@ -8,6 +8,8 @@ site_path="$project_dir_path/_site"
 posts_path="$project_dir_path/_posts"
 post_assets_path="$project_dir_path/assets/posts"
 
+source "$scripts_dir_path/activate_env"
+
 dev () {
     bundle exec jekyll serve --incremental
 }
@@ -17,6 +19,9 @@ test () {
     # check_for_archived_pages
     JEKYLL_ENV="production" bundle exec jekyll build --incremental
     proof_html
+    
+    aws sso login
+    
     rclone sync \
         --checksum \
         --progress \
@@ -34,6 +39,9 @@ push () {
     # archive_new_links
     JEKYLL_ENV="production" bundle exec jekyll build
     proof_html
+    
+    aws sso login
+    
     rclone sync \
         --checksum \
         --progress \
@@ -43,6 +51,12 @@ push () {
         s3-for-large-fyi:large.fyi
     # set the caching headers on all files that need it with https://s3tools.org/s3cmd (maybe)
     # purge the cache of updated files
+}
+
+init_env () {
+    bundle config set path "$project_dir_path/vendor.noindex"
+    bundle config set bin "$project_dir_path/bin"
+    bundle install
 }
 
 give_names () {
@@ -85,8 +99,11 @@ case ${subcommand} in
     push)
         push
         ;;
+    init_env)
+        init_env
+        ;;
     *)
-        echo "`basename ${0}`: usage: dev | test | push" 
+        echo "`basename ${0}`: usage: dev | test | push | init_env" 
         exit 1
         ;; 
 esac

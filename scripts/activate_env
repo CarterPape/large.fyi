@@ -1,4 +1,4 @@
-# This file must be used with "source bin/activate" *from bash*
+# This file must be used with "source scripts/activate_env" *from zsh*
 # You cannot run it directly
 
 script_path=$(realpath $0)

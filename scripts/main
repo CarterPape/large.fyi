@@ -2,7 +2,7 @@
 set -eu
 
 domain="large.fyi"
-production_bucket="s3-for-large-fyi:large.fyi"
+production_bucket="r2-for-large-fyi:large-fyi-public"
 
 script_path=$(realpath $0)
 scripts_dir_path=$(dirname $script_path)
@@ -23,8 +23,6 @@ test () {
     JEKYLL_ENV="production" bundle exec jekyll build --incremental
     proof_html
     
-    aws sso login
-    
     rclone sync \
         --checksum \
         --progress \
@@ -42,8 +40,6 @@ push () {
     # archive_new_links
     JEKYLL_ENV="production" bundle exec jekyll build
     proof_html
-    
-    aws sso login
     
     rclone sync \
         --checksum \

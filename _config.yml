@@ -80,5 +80,6 @@ exclude:
     - s3_website.yml
     - .env
     - scripts/
+    - pape-docs/
     - README.md
     - LICENSE

@@ -13,11 +13,23 @@ post_assets_path="$project_dir_path/assets/posts"
 
 source "$scripts_dir_path/activate_env"
 
+ensure_bundler () {
+    local lockfile="$project_dir_path/Gemfile.lock"
+    [[ -f $lockfile ]] || return 0
+    local pinned=$(awk '/^BUNDLED WITH$/ {getline; gsub(/^ +| +$/, ""); print; exit}' "$lockfile")
+    [[ -n $pinned ]] || return 0
+    [[ -f "$(gem environment gemdir)/gems/bundler-$pinned/exe/bundle" ]] && return 0
+    echo "Installing bundler $pinned (present only as a default gem; the shim needs a real install)..."
+    gem install bundler -v "$pinned" --no-document
+}
+
 dev () {
+    ensure_bundler
     bundle exec jekyll serve --incremental
 }
 
 test () {
+    ensure_bundler
     # check_names --print-on-fail
     # check_for_archived_pages
     JEKYLL_ENV="production" bundle exec jekyll build --incremental
@@ -36,6 +48,7 @@ test () {
 push () {
     git pull
     git push
+    ensure_bundler
     # check_names --die-on-fail
     # archive_new_links
     JEKYLL_ENV="production" bundle exec jekyll build
@@ -54,6 +67,7 @@ push () {
 }
 
 init_env () {
+    ensure_bundler
     bundle config set path "$project_dir_path/vendor.noindex"
     bundle config set bin "$project_dir_path/bin"
     bundle install

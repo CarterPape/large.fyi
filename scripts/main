@@ -81,25 +81,12 @@ check_names () {
     $dir_path/scripts/check_names.rb $1
 }
 
-purge_htmlproofer_cache_of_internal_query_links() {
-    gsed -i 's ,"\(/\|#\)[^"]*?[^"]*":{[^}]*}  g' "$project_dir_path/tmp/.htmlproofer/cache.log"
-}
-
 proof_html () {
-    purge_htmlproofer_cache_of_internal_query_links()
-    htmlproofer $site_path  \
-        --internal_domains $domain \
-        --assume_extension \
-        --enforce_https \
-        --check_favicon \
-        --check_html \
-        --check_opengraph \
-        --check_img_http \
-        --report_invalid_tags \
-        --report_missing_names \
-        --report_eof_tags \
-        --report_mismatched_tags \
-        --timeframe 2d
+    bundle exec htmlproofer $site_path \
+        --checks Links,Images,Scripts,Favicon,OpenGraph \
+        --swap-urls "^https\\://${domain//./\\.}:" \
+        --ignore-urls '/^https:\/\/www\.(merriam-webster\.com|oed\.com)\//,/^https:\/\/www\.oed\.com$/' \
+        --cache '{"timeframe": {"external": "2d"}}'
 }
 
 subcommand="${1}" 
